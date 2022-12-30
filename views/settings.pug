@@ -1,0 +1,18 @@
+extends layout 
+
+block content
+    .columns.is-centered.has-text-centered.mt-6
+        .column.is-2
+            h1.title Settings
+            form.field(action="/settings" method="post")
+                label.label username 
+                input.input(type="text" value=user.username name="username")
+                label.label password 
+                input.input(type="text" placeholder="****" name="pass")
+                label.label verify password 
+                input.input(type="text" placeholder="****" name="pass2")
+                input.button.is-success.is-fullwidth(type="submit" value="Save").mt-2
+            input.button.is-warning.is-fullwidth(type="submit" value="Logout").mt-2
+            form.field(action="/deactivate" method="post")
+                a(href="/deactivate")
+                    input.button.is-danger.is-fullwidth(type="submit" value="Deactivate").mt-2

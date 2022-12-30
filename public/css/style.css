@@ -1,0 +1,26 @@
+html { margin:0; padding: 0; height:100vh;}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.fa-solid {margin-right: 10px;}
+.navbar-brand {font-weight: bold;}
+.title {font-weight: normal;}
+strong {font-weight: bold !important;}
+
+.button.click-down:active {
+    margin-top: 15px !important;
+}
+
+.button {
+    font-weight: bold;
+}
+
+footer {
+    margin-top: auto;
+}
+
+#map { height: 180px; }

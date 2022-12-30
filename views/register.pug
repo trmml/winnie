@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    section.hero.is-medium.has-text-centered
+        div.hero-body 
+            .columns.is-centered
+                .column.is-2
+                    if messages
+                        article.message.is-danger
+                            .message-header
+                                p error
+                                button.delete(aria-label="delete")
+                            .message-body
+                                p=messages[0]
+                        
+                    form.field(action="/register" method="post")
+                        h1.title Register
+                        input.input(type="text" name="username" placeholder="username").my-2
+                        input.input(type="password" name="password" placeholder="********").my-2
+
+                        input.button(type="submit" value="Register").is-warning.is-fullwidth.click-down

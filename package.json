@@ -1,0 +1,29 @@
+{
+  "name": "winnie",
+  "version": "1.0.0",
+  "description": "Local servant",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
+    "connect-flash": "^0.1.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongodb": "^4.12.1",
+    "mongoose": "^6.8.0",
+    "morgan": "^1.10.0",
+    "ol": "^7.1.0",
+    "pug": "^3.0.2",
+    "stripe": "^11.5.0"
+  },
+  "scripts": {
+    "start": "node app.js --watch",
+    "test": "mocha test --exit"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "mocha": "^10.2.0"
+  }
+}

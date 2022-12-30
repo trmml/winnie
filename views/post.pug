@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    .columns.is-centered.has-text-centered.mt-6
+        .column.is-half.mt-6
+                h1.title #{post.body} / $#{post.price}
+                h2.subtitle
+                    a(href="/user/"+author)=author
+                div#map
+
+    .columns.is-centered.has-text-centered.mt-6
+        .column.is-half
+            form.field(action="/purchase/"+post.id method="post")
+                input.button(type="submit" value="Purchase").buttons

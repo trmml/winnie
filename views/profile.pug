@@ -1,0 +1,11 @@
+extends layout 
+
+block content
+    .columns.is-centered.has-text-centered.mt-6
+        .column.is-half.mt-6
+                h1.title=user.username
+                ul.list
+                    each post in posts
+                        a(href="/post/"+post._id)
+                            li.list-item=post.body
+                p.mt-6 User since #{user.createdAt.toDateString()}

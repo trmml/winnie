@@ -1,0 +1,23 @@
+nav.navbar(role='navigation' aria-label='main navigation')
+  .navbar-brand
+    a.navbar-item(href='/')
+      i(class="fa-solid fa-honey-pot" style="color: #E1AD01;")
+    a.navbar-burger(role='button' aria-label='menu' aria-expanded='false' data-target='navbar-basic')
+      span(aria-hidden='true')
+      span(aria-hidden='true')
+      span(aria-hidden='true')
+  #navbar-basic.navbar-menu
+    .navbar-end
+      .navbar-item
+        if (user)
+          .buttons
+            a(href="/user/"+user.username)
+              strong.button.is-warning=user.username
+            a(href="/settings").ml-2
+              strong.button.is-warning Settings
+        else
+          .buttons
+            a.button.is-warning(href="/register")
+              strong Register
+            a.button.is-light(href="login")
+              | Login
