@@ -5,7 +5,7 @@ let User = require('../models/User')
 
 let authenticated = require('./middle.js');
 
-router.route('/logout')
+router.route('/')
     .get(authenticated, (req, res) => {
         try {
             req.session.destroy();

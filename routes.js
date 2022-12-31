@@ -10,15 +10,15 @@ let stripe = require('stripe')(s_config.PRIVATE);
 
 router.use('/', require('./routes/home.js'));
 router.use('/login', require('./routes/login.js'));
-router.use(require('./routes/register.js'));
-router.use(require('./routes/post.js'));
-router.use(require('./routes/purchase.js'));
-router.use(require('./routes/user.js'));
-router.use(require('./routes/settings.js'));
-router.use(require('./routes/logout.js'));
-router.use(require('./routes/deactivate.js'));
-router.use(require('./routes/dev.js'));
-router.use(require('./routes/messages.js'));
-router.use(require('./routes/404.js'));
+router.use('/register', require('./routes/register.js'));
+router.use('/post', require('./routes/post.js'));
+router.use('/purchase', require('./routes/purchase.js'));
+router.use('/user', require('./routes/user.js'));
+router.use('/settings', require('./routes/settings.js'));
+router.use('/logout', require('./routes/logout.js'));
+router.use('/deactivate', require('./routes/deactivate.js'));
+router.use('/dev', require('./routes/dev.js'));
+router.use('/messages', require('./routes/messages.js'));
+router.use('*', require('./routes/404.js'));
 
 module.exports = router;

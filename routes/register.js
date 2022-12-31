@@ -3,7 +3,7 @@ let router = require('express').Router();
 let User = require('../models/User')
     , Post = require('../models/Post');
 
-router.route('/register')
+router.route('/')
     .get((req, res) => res.render('register'))
     .post(async (req, res) => {
         let {username, password} = req.body ?? res.send({error: "no credentials provided"});

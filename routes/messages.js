@@ -5,7 +5,7 @@ let User = require('../models/User')
 
 let authenticated = require('./middle.js');
 
-router.get('/purchase/:id/success', (req, res) => {
+router.get('/:id/success', (req, res) => {
     console.log("success")
     res.render('success', {session: req.session.stripe});
 });

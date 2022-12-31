@@ -5,7 +5,7 @@ let User = require('../models/User')
 
 let authenticated = require('./middle.js');
 
-router.route('/user/:username')
+router.route('/:username')
     .get(authenticated, async (req, res) => {
         let username = req.params.username ?? res.send({error: "no parameter provided"});
 

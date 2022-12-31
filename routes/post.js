@@ -5,7 +5,7 @@ let User = require('../models/User')
 
 let authenticated = require('./middle.js');
 
-router.route('/post')
+router.route('/')
     .post(authenticated, async (req, res) => {
         if (!req.body) return res.send({error: "no request body provided"});
         

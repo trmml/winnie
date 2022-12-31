@@ -5,7 +5,7 @@ let User = require('../models/User')
 
 let authenticated = require('./middle.js');
 
-router.route('/settings')
+router.route('/')
     .get(authenticated, (req, res) => {
         res.render('settings', {user: req.session.user});
     })

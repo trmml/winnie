@@ -5,7 +5,7 @@ let User = require('../models/User')
 
 let authenticated = require('./middle.js');
 
-router.route('/deactivate')
+router.route('/')
     .post(authenticated, (req, res) => {
         try {
             User.findOneAndDelete(req.session.user).
