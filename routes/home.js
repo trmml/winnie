@@ -5,14 +5,15 @@ let User = require('../models/User')
 
 let authenticated = require('./middle.js');
 
-router.get('/', async (req,res)=>{
-    if (!req.session.user) return res.render('index');
-    let posts = await Post.find().populate('author');
+router
+    .get('/', async (req,res)=>{
+        if (!req.session.user) return res.render('index');
+        let posts = await Post.find().populate('author');
 
-    let data = {user:req.session.user};
-    data.posts = posts ?? posts
+        let data = {user:req.session.user};
+        data.posts = posts ?? posts
 
-    res.render('home', data);
-});
+        res.render('home', data);
+    });
 
 module.exports = router;

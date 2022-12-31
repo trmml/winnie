@@ -9,7 +9,7 @@ const userSchema = new Schema({
     password: {type:String, required:true}
 }, {timestamps: {'created_at':'created_at'}});
 
-userSchema.pre('save', (next) => {
+userSchema.pre('save', function (next) {
   var u = this;
 
   bcrypt.genSalt(10, function(e, s) {
@@ -24,6 +24,7 @@ userSchema.pre('save', (next) => {
 });
 
 userSchema.methods.compare = function(pw) {
+  console.log(pw);
   return bcrypt.compareSync(pw, this.password);
 };
 

@@ -1,6 +1,9 @@
 let router = require('express').Router();
 
-router.route('/login')
+let User = require('../models/User')
+    , Post = require('../models/Post');
+
+router.route('/')
     .get((req,res)=>res.render('login'))
     .post(async (req, res) =>{
         try {
@@ -10,10 +13,10 @@ router.route('/login')
                 req.session.user = user;
                 res.redirect('/');
             } else {
-                res.redirect('/login');
-            }
+                req.flash('message', 'invalid username/password');
+                res.render('login', {messages:req.flash('message')});            }
         } catch {
-            req.flash('message', 'invalid username/password');
+            req.flash('message', `could not find ${req.body.username}`);
             res.render('login', {messages:req.flash('message')});
         }
     });

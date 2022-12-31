@@ -8,8 +8,8 @@ let User = require('./models/User.js')
 let s_config = require('./config/stripe');
 let stripe = require('stripe')(s_config.PRIVATE);
 
-router.use(require('./routes/home.js'));
-router.use(require('./routes/login.js'));
+router.use('/', require('./routes/home.js'));
+router.use('/login', require('./routes/login.js'));
 router.use(require('./routes/register.js'));
 router.use(require('./routes/post.js'));
 router.use(require('./routes/purchase.js'));
