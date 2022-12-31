@@ -1,7 +1,7 @@
 winnie
 ======
 
-Easy smart contracts for simple services.
+Local [reverse auction](https://en.wikipedia.org/wiki/Reverse_auction) web interface.
 
 development
 ===========
