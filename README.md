@@ -1,23 +1,23 @@
-winnie
+Sting
 ======
 
-Local [reverse auction](https://en.wikipedia.org/wiki/Reverse_auction) web interface.
+[Reverse auction](https://en.wikipedia.org/wiki/Reverse_auction) market.
 
-development
+Development
 ===========
 
-clone, install, run.
+Clone, install, run.
 
 ```bash
-git clone https://github.com/winnie
+git clone https://github.com/sting
 cd winnie
 
 npm install
 npm run start
 ```
 
-docs
-----
+Documentation
+-------------
 
 ### `POST /register`
 new user
@@ -51,4 +51,4 @@ $ npm run test
 license
 =======
 
-&copy; [mit](https://github.com/trmml/winnie/blob/main/LICENSE)
+&copy; [mit](https://github.com/trmml/sting/blob/main/LICENSE)
