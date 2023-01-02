@@ -10,7 +10,7 @@ Clone, install, run.
 
 ```bash
 git clone https://github.com/sting
-cd winnie
+cd sting
 
 npm install
 npm run start
