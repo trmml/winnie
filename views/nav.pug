@@ -1,23 +1,11 @@
-nav.navbar(role='navigation' aria-label='main navigation')
-  .navbar-brand
-    a.navbar-item(href='/')
-      i(class="fa-solid fa-bee" style="color: #E1AD01;")
-    a.navbar-burger(role='button' aria-label='menu' aria-expanded='false' data-target='navbar-basic')
-      span(aria-hidden='true')
-      span(aria-hidden='true')
-      span(aria-hidden='true')
-  #navbar-basic.navbar-menu
-    .navbar-end
-      .navbar-item
-        if (user)
-          .buttons
-            a(href="/user/"+user.username)
-              strong.button.is-warning=user.username
-            a(href="/settings").ml-2
-              strong.button.is-warning Settings
-        else
-          .buttons
-            a.button.is-warning(href="/register")
-              strong Register
-            a.button.is-light(href="login")
-              | Login
+nav.relative.container.mx-auto.bg-yellow-500.p-6.rounded
+    div.flex.items-center.justify-between
+        div.pt-2
+            a(href="#" class="hover:text-white")
+                i(class="fa-solid fa-bee")
+        div.flex.hidden.space-x-6(class="md:flex")
+            a(href="#" class="hover:text-white") About
+            a(href="#" class="hover:text-white") Docs
+        div.flex.hidden.space-x-6(class="md:flex")
+            a.hidden(href="#" class="md:block p-3 px-6 pt-2 text-black bg-yellow-600 rounded") Login
+            a.hidden(href="#" class="md:block p-3 px-6 pt-2 text-black bg-yellow-600 rounded") Register

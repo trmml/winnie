@@ -1,14 +1,10 @@
-extends layout
+extends layout 
 
-block content
-    section.container.hero.has-text-centered.is-fullheight
-        div.hero-body.is-centered
-            div 
-                h1.title.is-size-1.fa-solid.fa-bee(style="color: #E1AD01;")
-                p.title.is-size-1 <strong>Sting</strong>: your <strong>local</strong> servant
-                p.subtitle.is-size-3 Easy smart contracting. Task manager deluxe.
-                .buttons.columns 
-                    .column.is-half
-                        a(href="/register"): .button.is-warning.is-fullwidth Get started
-                    .column.is-half
-                        a(href="#"): .button.is-light.is-fullwidth More info
+block content 
+    section#hero
+        .container.flex.flex-col-reverse.items-center.px-6.mx-auto.mt-10.space-y-0(class="md:flex-row")
+            div.flex.flex-col.mb-32.space-y-12(class="md:w-1/2")
+                h1.max-w-md.text-4xl.font-bold.text-center.md(class="text-5xl md:text-left") Meet Sting
+                p.max-w-sm.text-center.text-dark(class="md:text-left") Reverse auction market
+            div(class="md:w-1/2")
+                a(href="#"): i(class="fa-solid fa-bee")
