@@ -1,9 +1,14 @@
 nav.rounded.bg-yellow-500.px-2(class="sm:px-4 py-2.5")
     div.container.flex.flex-wrap.items-center.justify-between.mx-auto
         a.flex.items-center(href="/")
-            img.h-6.mr-3(src="img/logo.png" class="sm:h-9")
+            img.h-6.mr-3(src="/img/logo.png" class="sm:h-9")
             span(class="self-center text-xl font-semibold whitespace-nowrap") Sting
-        div.hidden.w-full.text-black(class="md:block md:w-auto")
-            ul.flex.flex-col.p-4.m5-4.border.rounded-lg(class="md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0")
-                li: a.block.p-3.rounded(href="/register" class="md:bg-transparent hover:bg-yellow-400 active:bg-yellow-600") Register
-                li: a.block.p-3.rounded(href="/login" class="md:bg-transparent hover:bg-yellow-400 active:bg-yellow-600") Login
+        if (user)
+            div.hidden.w-full.text-black(class="md:block md:w-auto")
+                ul.flex.flex-col.p-4.m5-4.border.rounded-lg(class="md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0")
+                    li: a.block.p-3.rounded(class="inline-block px-6 py-2.5 bg-yellow-500 text-black font-bold text-xs rounded hover:bg-yellow-600 focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-700 active:shadow-lg transition duration-150 ease-in-out" href="/user/"+user.username)=user.username
+        else
+            div.hidden.w-full.text-black(class="md:block md:w-auto")
+                ul.flex.flex-col.p-4.m5-4.border.rounded-lg(class="md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0")
+                    li: a.block.p-3.rounded(class="inline-block px-6 py-2.5 bg-yellow-500 text-black font-bold text-xs rounded hover:bg-yellow-600 focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-700 active:shadow-lg transition duration-150 ease-in-out" href="/register") Register
+                    li: a.block.p-3.rounded(href="/login" class="inline-block px-6 py-2.5 bg-yellow-500 text-black font-bold text-xs rounded hover:bg-yellow-600 focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-700 active:shadow-lg transition duration-150 ease-in-out") Login

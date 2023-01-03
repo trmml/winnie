@@ -23,4 +23,7 @@ router
         }
     });
 
+router
+    .get('/session.json', (req, res) => res.send(req.session))
+
 module.exports = router;

@@ -1,26 +1,13 @@
 extends layout 
 
 block content
-    .columns.has-text-centered.is-centered.m-6
-        .column
-            h2.subtitle Post
-            form(action="/post" method="post").field
-                textarea.textarea.my-2(rows=5 name="body" placeholder="I’ll have two number 9s a number 9 large a number 6 with extra dip,")
-                .control.has-icons-left.my-2
-                    input.input(type="number" name="price" placeholder="3.50")
-                    span.icon.is-left: i.fa-solid.fa-dollar-sign
-                    input.button.is-warning.is-fullwidth.mt-2(type="submit" value="Submit")
-        .column
-            h2.subtitle Posts
-            table.table.is-bordered.is-striped.is-fullwidth
-                thead
-                    tr
-                        th: abbr(title="Price") $
-                        th Body
-                        th Author
-                tbody
-                    each post in posts
-                        tr
-                            th=post.price
-                            td: a(href="/post/"+post._id)=post.body
-                            td: a(href="/user/"+post.author.username)=post.author.username
+    .bg-white
+        .container.px-6.py-4.mx-auto(class="lg:flex.lg:h-64.lg:py-16")
+            .flex.items-center.justify-center.mt-20(class="w-full")
+                .max-w-lg.m-20
+                    h1.text-5xl.font-extrabold.tracking-wide.text-white.text-gray-800(class="lg:text-3xl.lg:text-4xl") Post
+                    form(action="/post" method="POST").content-center
+                        .input-group.input-group-outline.mb-6
+                            textarea.form-control.w-full.my-4.rounded.outline(type="text" rows=5 name="body")
+                            input(type="number" name="price").w-full.my-4.outline.rounded
+                            input(type="submit" value="Post" class="hover:bg-yellow-400").bg-yellow-500.p-4.w-full.rounded.font-bold

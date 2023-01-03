@@ -11,6 +11,8 @@ router.route('/')
             username: username,
             password: password
         });
+
+        console.log(u);
     
         try {
             req.session.user = await u.save();

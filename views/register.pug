@@ -2,13 +2,13 @@ extends layout
 
 block content
     div.grid.h-screen.place-items-center
-        form.bg-white.shadow-md.rounded.p-10.mb-4
+        form.bg-white.shadow-md.rounded.p-10.mb-4(action="/register" method="POST")
             h1.text-3xl.font-bold.mt-0.pb-8 Register
             div.mb-4
-                label(class="block text-gray-700 text-sm font-bold mb-2" for="username" name="password") Username 
-                input(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username")
+                label(class="block text-gray-700 text-sm font-bold mb-2" for="username" name="username") Username 
+                input(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="username" name="username")
             div.mb-6
                 label.block.text-grey-700.text-sm.font-bold.mb-2(for="password" name="password") Password
                 input.shadow.appearance-none.border.rounded.w-full.py-2.px-3.text-gray-700.mb-3.leading-tight(class="focus:outline-none focus:shadow-outline" id="password" type="password" name="password" placeholder="*********")
             div.flex.item-center.justify-between
-                button.bg-yellow-500.text-black.font-bold.p-2.w-full.rounded(class="hover:bg-yellow-600 focus:outline-none focus:shadow-outline" type="button") Register
+                input.bg-yellow-500.text-black.font-bold.p-2.w-full.rounded(class="hover:bg-yellow-600 focus:outline-none focus:shadow-outline" type="submit" value="Register")

@@ -1,6 +1,7 @@
 function authenticated (req, res, next) {
+    console.log(req.session);
     if (!req.session || !req.session.user)
-        res.redirect('/login');
+        return res.redirect('/login');
     next();
 }
 

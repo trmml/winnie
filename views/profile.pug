@@ -1,11 +1,9 @@
 extends layout 
 
 block content
-    .columns.is-centered.has-text-centered.mt-6
-        .column.is-half.mt-6
-                h1.title=user.username
-                ul.list
-                    each post in posts
-                        a(href="/post/"+post._id)
-                            li.list-item=post.body
-                p.mt-6 User since #{user.createdAt.toDateString()}
+    .bg-white
+        .container.px-6.py-4.mx-auto(class="lg:flex.lg:h-64.lg:py-16")
+            .flex.items-center.justify-center.mt-20(class="w-full")
+                .max-w-lg.m-20
+                    h1.text-5xl.font-extrabold.tracking-wide.text-white.text-gray-800(class="lg:text-3xl.lg:text-4xl")=user.username
+                    h2.text-3xl.text-gray-300.text-gray-600 #{user.createdAt.toDateString()}
