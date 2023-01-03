@@ -1,9 +1,11 @@
 extends layout 
 
-block content 
-    div.container.flex.flex-col-reverse.items-center.px-6.mx-auto.mt-20(class="md:flex-row")
-        div.flex.flex-col.mb-32.text-center(class="md:w-1/2")
-            h1.max-w-md.text-4xl.font-bold(class="text-5xl md:text-left") Meet Sting
-            h2.max-w-sm.text-3xl.text-zinc-500(class="md:text-left") Reverse auction market.
-        div.px-4(class="w-1/4 sm:w-1/5")
-            img(src="img/logo.png")
+block content
+    .bg-white
+        .container.px-6.py-4.mx-auto(class="lg:flex.lg:h-64.lg:py-16")
+            .flex.items-center.justify-center.mt-20(class="w-full")
+                .max-w-lg.m-20
+                    h1.text-5xl.font-extrabold.tracking-wide.text-white.text-gray-800(class="lg:text-3xl.lg:text-4xl") Sting
+                    h2.text-3xl.text-gray-300.text-gray-600 Reverse auction market.
+                    a.inline-block.p-4.font-bold.text-center.text-white.transition-colors.duration-200.transform.bg-yellow-500.rounded-md.mt-4.w-full(class="hover:bg-yellow-400" href='#') Get started
+                img.object-cover.rounded-md.ml-20(class="lg:h-full" src='img/logo.png' alt="logo")
