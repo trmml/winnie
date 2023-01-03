@@ -1,21 +1,16 @@
-extends layout
+extends layout 
 
 block content
-    section.hero.is-medium.has-text-centered
-        div.hero-body 
-            .columns.is-centered
-                .column.is-2
-                    if messages
-                        article.message.is-danger
-                            .message-header
-                                p error
-                                button.delete(aria-label="delete")
-                            .message-body
-                                p=messages[0]
-
-                    form.field(action="/login" method="post")
-                        h1.title Login
-                        input.input(type="text" name="username" placeholder="username").my-2
-                        input.input(type="password" name="password" placeholder="********").my-2
-
-                        input.button(type="submit" value="Login").is-warning.is-fullwidth.click-down
+    div.grid.h-screen.place-items-center
+        form.bg-white.shadow-md.rounded.p-10.mb-4
+            h1.text-3xl.font-bold.mt-0.pb-8 Login
+            div.mb-4
+                label(class="block text-gray-700 text-sm font-bold mb-2" for="username" name="password") Username 
+                input(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username")
+            div.mb-6
+                label.block.text-grey-700.text-sm.font-bold.mb-2(for="password" name="password") Password
+                input.shadow.appearance-none.border.rounded.w-full.py-2.px-3.text-gray-700.mb-3.leading-tight(class="focus:outline-none focus:shadow-outline" id="password" type="password" name="password" placeholder="*********")
+                //- p.text-red-500.text-xs.italic Please choose a password
+            div.flex.item-center.justify-between
+                button.bg-yellow-500.text-black.font-bold.p-2.mr-4.rounded(class="w-1/2 hover:bg-yellow-600 focus:outline-none focus:shadow-outline" type="button") Login
+                a.inline-block.align-baseline.font-bold.text-sm.text-black(class="w-1/2 hover:text-y" href="#") Forgot Password?

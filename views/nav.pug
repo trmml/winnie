@@ -1,11 +1,9 @@
 nav.rounded.bg-yellow-500.px-2(class="sm:px-4 py-2.5")
     div.container.flex.flex-wrap.items-center.justify-between.mx-auto
-        a.flex.items-center(href="#")
+        a.flex.items-center(href="/")
             img.h-6.mr-3(src="img/logo.png" class="sm:h-9")
             span(class="self-center text-xl font-semibold whitespace-nowrap") Sting
         div.hidden.w-full.text-black(class="md:block md:w-auto")
             ul.flex.flex-col.p-4.m5-4.border.rounded-lg(class="md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0")
-                li
-                    a.block.py-2.pl-3.pr-4.bg-yellow-600.rounded(href="/register" class="md:bg-transparent md:p-0") Register
-                li 
-                    a.block.py-2.pl-3.pr-4.rounded(class="hover:bg-yellow-600 md:hover:bg-transparent md:border-9 md:p-0") Login
+                li: a.block.py-2.pl-3.pr-4.bg-yellow-700.rounded(href="/register" class="md:bg-transparent md:p-0") Register
+                li: a.block.py-2.pl-3.pr-4.rounded(href="/login" class="hover:bg-yellow-600 md:hover:bg-transparent md:border-9 md:p-0") Login
